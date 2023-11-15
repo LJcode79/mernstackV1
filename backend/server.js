@@ -17,6 +17,9 @@ app.use((req, res, next) => {
 })
 
 //routes
+app.use("/", (req, res) => {
+    res.send("Server is running/")
+})
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
